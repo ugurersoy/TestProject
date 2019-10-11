@@ -12,6 +12,8 @@
 		042593372351134100AD468D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042593352351134100AD468D /* Main.storyboard */; };
 		042593392351134300AD468D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042593382351134300AD468D /* Assets.xcassets */; };
 		0425933C2351134300AD468D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425933A2351134300AD468D /* LaunchScreen.storyboard */; };
+		04259347235118BF00AD468D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259346235118BF00AD468D /* Reachability.swift */; };
+		042593492351260D00AD468D /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042593482351260D00AD468D /* NavigateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		042593382351134300AD468D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0425933B2351134300AD468D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0425933D2351134300AD468D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04259346235118BF00AD468D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		042593482351260D00AD468D /* NavigateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				042593312351134100AD468D /* AppDelegate.swift */,
 				042593332351134100AD468D /* ViewController.swift */,
+				042593482351260D00AD468D /* NavigateViewController.swift */,
+				04259346235118BF00AD468D /* Reachability.swift */,
 				042593352351134100AD468D /* Main.storyboard */,
 				042593382351134300AD468D /* Assets.xcassets */,
 				0425933A2351134300AD468D /* LaunchScreen.storyboard */,
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				042593342351134100AD468D /* ViewController.swift in Sources */,
+				042593492351260D00AD468D /* NavigateViewController.swift in Sources */,
 				042593322351134100AD468D /* AppDelegate.swift in Sources */,
+				04259347235118BF00AD468D /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

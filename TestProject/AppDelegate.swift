@@ -12,10 +12,31 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var reachability:Reachability?
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+    do {
+        self.reachability = try? Reachability.init()
+        
+        if((self.reachability!.connection) != .unavailable){
+            print("internet available")
+            Thread.sleep(forTimeInterval: 3.0)
+           
+        }else{
+            print("internet not available")
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "navigate") as UIViewController
+           window = UIWindow(frame: UIScreen.main.bounds)
+           window?.rootViewController = initialViewControlleripad
+           window?.makeKeyAndVisible()
+        }
+     
+      }
+        
+        
         return true
     }
 
