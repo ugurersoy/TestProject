@@ -14,6 +14,8 @@
 		0425933C2351134300AD468D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425933A2351134300AD468D /* LaunchScreen.storyboard */; };
 		04259347235118BF00AD468D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259346235118BF00AD468D /* Reachability.swift */; };
 		042593492351260D00AD468D /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042593482351260D00AD468D /* NavigateViewController.swift */; };
+		0462DB622351D0DF005B1824 /* CellMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462DB612351D0DF005B1824 /* CellMovieTableViewCell.swift */; };
+		04D8447223515A160088A0D8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8447123515A160088A0D8 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0425933D2351134300AD468D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04259346235118BF00AD468D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		042593482351260D00AD468D /* NavigateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateViewController.swift; sourceTree = "<group>"; };
+		0462DB612351D0DF005B1824 /* CellMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMovieTableViewCell.swift; sourceTree = "<group>"; };
+		04D8447123515A160088A0D8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				042593332351134100AD468D /* ViewController.swift */,
 				042593482351260D00AD468D /* NavigateViewController.swift */,
 				04259346235118BF00AD468D /* Reachability.swift */,
+				0462DB612351D0DF005B1824 /* CellMovieTableViewCell.swift */,
+				04D8447123515A160088A0D8 /* Movie.swift */,
 				042593352351134100AD468D /* Main.storyboard */,
 				042593382351134300AD468D /* Assets.xcassets */,
 				0425933A2351134300AD468D /* LaunchScreen.storyboard */,
@@ -145,6 +151,8 @@
 				042593492351260D00AD468D /* NavigateViewController.swift in Sources */,
 				042593322351134100AD468D /* AppDelegate.swift in Sources */,
 				04259347235118BF00AD468D /* Reachability.swift in Sources */,
+				0462DB622351D0DF005B1824 /* CellMovieTableViewCell.swift in Sources */,
+				04D8447223515A160088A0D8 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
