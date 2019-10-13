@@ -108,8 +108,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         movieCell?.lblTitle.text = movieList[indexPath.row].Title
         movieCell?.lblYear.text = movieList[indexPath.row].Year
         movieCell?.lblAutor.text = movieList[indexPath.row].Type
-        movieCell?.imageView?.image = helper.loadImg(path: movieList[indexPath.row].Poster)
-        
+        helper.loadImg(path: movieList[indexPath.row].Poster,imageView:(movieCell?.imageView)!)
+       
         return movieCell!
     }
     

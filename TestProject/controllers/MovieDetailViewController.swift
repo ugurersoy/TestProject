@@ -32,7 +32,7 @@ class MovieDetailViewController: UIViewController {
         lblTitle.text = movieTitle
         lblAutor.text = movieType
         lblYear.text = movieyear
-        movieImg.image = helper.loadImg(path: moviePath)
+        helper.loadImg(path: moviePath,imageView: movieImg!)
         
         Analytics.logEvent(movieTitle, parameters: nil)
         Analytics.logEvent(movieType, parameters: nil)

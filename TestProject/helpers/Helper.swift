@@ -11,14 +11,14 @@ import UIKit
 
 class Helper {
     
-    func loadImg (path : String) -> UIImage {
-        var ImageView = UIImage()
+    func loadImg (path : String,imageView:UIImageView)  {
+       
         
         if let url = URL(string: path){
             
             do {
                 let data = try Data(contentsOf: url)
-                ImageView = UIImage(data:data)!
+                imageView.image = UIImage(data:data)!
                 
                 
             }catch{
@@ -26,8 +26,5 @@ class Helper {
             }
             
         }
-        
-        
-        return ImageView
     }
 }
