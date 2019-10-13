@@ -19,11 +19,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var txtSearch: UITextField!
     
+    var shapeLayer : CAShapeLayer!
+    var lblLoading : UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getListFromUrl(name: "BATMAN")
+        startLoadingView()
     }
     
     
@@ -62,6 +65,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                            
                        
                                 self.movieList=mv.Search
+                                self.stopLoadinfView()
                                 self.tableView.reloadData()
                             
                            
@@ -132,12 +136,60 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     
-    func loadingView(){
+    func startLoadingView(){
+        shapeLayer = CAShapeLayer()
+        let center = view.center
         
+        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise:true)
+          shapeLayer.path = circularPath.cgPath
+        
+          shapeLayer.fillColor =  UIColor.lightGray.cgColor
+          shapeLayer.strokeColor =  UIColor.darkGray.cgColor
+          shapeLayer.lineWidth = 10
+        
+        shapeLayer.lineDashPattern = [5]
+        
+        let lineDashPhaseAnimation = CABasicAnimation(keyPath: "lineDashPhase")
+        lineDashPhaseAnimation.byValue = 10.0
+        lineDashPhaseAnimation.duration = 0.75
+        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        lineDashPhaseAnimation.repeatCount = .greatestFiniteMagnitude
+        
+        shapeLayer.add(lineDashPhaseAnimation, forKey: "lineDashPhaseAnimation")
+        
+    
+          view.layer.addSublayer(shapeLayer)
+        
+         lblLoading = UILabel()
+         lblLoading.text = "Pinsoft"
+         lblLoading.font = UIFont.systemFont(ofSize: 25)
+         lblLoading.sizeToFit()
+         lblLoading.center = view.center
+        
+         view.addSubview(lblLoading)
+        
+        
+        fadeViewInThenOut(view: lblLoading!,delay: 0)
     }
     
    
+    func fadeViewInThenOut(view : UIView, delay: TimeInterval) {
+        
+        let animationDuration = 1.5
+        
+        UIView.animate(withDuration: animationDuration, delay: delay, options: [UIView.AnimationOptions.autoreverse, UIView.AnimationOptions.repeat], animations: {
+            view.alpha = 0
+            print("animation repead")
+        }, completion: nil)
+        
+    }
     
+    
+    func stopLoadinfView(){
+        
+        lblLoading.isHidden = true
+        shapeLayer.isHidden = true
+    }
 
 }
 
