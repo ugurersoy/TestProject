@@ -8,11 +8,20 @@
 
 import Foundation
 
+
+
 struct Movie :Decodable{
     
-    var Title :String
-    var Year :String
-    var Writer  :String
-    var Poster  :String
+    let Title :String
+    let Year :String
+    let Poster  :String
+    let imdbID : String
+    let `Type` : String
+   
     
 }
+
+
+
+
+
